@@ -11,4 +11,8 @@ def menu_principal ():
     print (" 3 - Marcar conta como paga: ")
     print (" 4 - Excluir conta: ")
     print (" 5 - Resumo Financeiro: ")
-    print (" 6 - Sair")
+    print (" 0 - Sair")
+
+
+#Dando funcionalidade ao Menu Principal
+# no arquivo main.py
