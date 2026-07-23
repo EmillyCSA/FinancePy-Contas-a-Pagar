@@ -7,6 +7,5 @@ def cadastrar_conta ():
     vencimento = input ("Vencimento: ")
 
     print ("Conta cadastrada com sucesso!")
-    print (f"Nome = {nome_conta}")
-    print (f"valor da conta = {valor} ")
-    print (f"Vencimento = {vencimento}")
+    print (             )
+

@@ -23,13 +23,10 @@ while True:
         print ( "Resumo Financeiro: ")
     elif opcao == "0":
         print ("Sair/Finazlizado")
-    break
+        break
 
 else:
     print ("Opção Inválida")
-
-
-
 
 
 
