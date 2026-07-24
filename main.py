@@ -1,6 +1,7 @@
 #Início de projeto - Menu Principal
 
 # Importa a função responsável por exibir o menu principal
+import banco
 from menu import menu_principal
 from contas import cadastrar_conta
 
