@@ -14,4 +14,3 @@ CREATE TABLE IF NOT EXISTS contas(
 """)
 
 conexao.commit()
-

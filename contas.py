@@ -14,7 +14,7 @@ def cadastrar_conta ():
 
     conexao.commit()
 
-    print ("Conta cadastrada com sucesso!")
+    print ("✅Conta cadastrada com sucesso!")
     print (             )
 
 #Listar contas
@@ -37,3 +37,24 @@ def listar_contas():
         print(f"Status......: {paga}")
         print("=" * 35)
         print(          )
+
+#Criar e definir a função 3: Marcar conta como paga
+
+def marcar_conta_paga():
+    print("\n" + "=" * 35)
+    print("MARCAR CONTA COMO PAGA".center(35))
+    print("=" * 35)
+
+    id_conta = input("Digite o ID da conta: ")
+
+    cursor.execute("""
+    UPDATE contas
+    SET paga = ?
+    WHERE id = ?
+    """, ("Sim", id_conta))
+
+    conexao.commit()
+    print(      )
+    print("✅Conta marcada como paga com sucesso!")
+    print(      )
+
