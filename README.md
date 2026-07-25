@@ -1,2 +1,92 @@
-# FinancePy-Contas-a-Pagar
-# 💰 FinancePy  O **FinancePy** é um sistema de controle de contas a pagar desenvolvido em **Python**, criado com o objetivo de praticar lógica de programação e conceitos fundamentais da linguagem.  O projeto permitirá cadastrar, listar, atualizar e gerenciar contas, evoluindo gradualmente com novas funcionalidades, como persistência de dados, relatórios e integração com banco de dados.  ## 🎯 Objetivo  Este projeto faz parte do meu processo de aprendizado em Python e foi desenvolvido para aplicar na prática conceitos como:  * Funções * Listas e dicionários * Estruturas de decisão e repetição * Organização de código em módulos * Manipulação de arquivos (em versões futuras) * Boas práticas com Git e GitHub  ## 🚀 Funcionalidades (Versão 1)  * Cadastrar contas a pagar * Listar contas cadastradas * Marcar contas como pagas * Exibir o total de contas pendentes * Menu interativo no terminal  ## 📌 Próximas melhorias  * Persistência de dados em JSON * Pesquisa por categoria * Relatórios financeiros * Banco de dados SQLite * Interface gráfica * API em FastAPI  ---  **Projeto sendo desenvolvido como parte dos meus estudos em Python.**
+# 💰 FinancePy - Contas a Pagar
+
+Sistema de controle de contas a pagar desenvolvido em **Python** com o objetivo de praticar programação, organização de projetos e banco de dados utilizando **SQLite**.
+
+---
+
+## 📖 Sobre o projeto
+
+O **FinancePy** é um projeto de estudos criado para colocar em prática conceitos fundamentais de desenvolvimento de software.
+
+Ao longo do projeto, novas funcionalidades serão implementadas, permitindo acompanhar a evolução do sistema e do aprendizado.
+
+---
+
+## 🎯 Objetivos
+
+Durante o desenvolvimento deste projeto estou praticando:
+
+- Python
+- Lógica de programação
+- Funções
+- Estruturas de decisão e repetição
+- Organização em módulos
+- SQLite
+- Git e GitHub
+
+---
+
+## 🚀 Funcionalidades
+
+### ✅ Implementadas
+
+- Cadastro de contas
+- Listagem de contas
+- Persistência de dados com SQLite
+- Menu interativo no terminal
+- Organização em módulos
+
+### 🔄 Em desenvolvimento
+
+- Marcar conta como paga
+- Excluir contas
+- Resumo financeiro
+- Validação de dados
+- Pesquisa de contas
+
+---
+
+## 🛠️ Tecnologias
+
+- Python 3
+- SQLite
+- Git
+- GitHub
+
+---
+
+## 📁 Estrutura do projeto
+
+```
+FinancePy-Contas-a-Pagar/
+
+├── main.py
+├── menu.py
+├── contas.py
+├── banco.py
+├── financepy.db
+└── README.md
+```
+
+---
+
+## 📷 Imagens
+
+*Em breve serão adicionadas capturas de tela do sistema.*
+
+---
+
+## 📌 Próximas melhorias
+
+- [ ] Marcar conta como paga
+- [ ] Excluir contas
+- [ ] Resumo financeiro
+- [ ] Pesquisa por nome
+- [ ] Validação de entradas
+- [ ] Interface gráfica (futuro)
+
+---
+
+## 👩‍💻 Desenvolvido por
+
+**Emilly Cristina da Silva Almeida**
