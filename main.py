@@ -3,7 +3,7 @@
 # Importa a função responsável por exibir o menu principal
 import banco
 from menu import menu_principal
-from contas import cadastrar_conta, listar_contas, marcar_conta_paga
+from contas import cadastrar_conta, listar_contas, marcar_conta_paga, excluir_conta
 
 while True:
     menu_principal()
@@ -19,7 +19,7 @@ while True:
     elif opcao == "3":
         marcar_conta_paga ()
     elif opcao == "4":
-        print ( "Excluir conta: ")
+        excluir_conta ()
     elif opcao == "5":
         print ( "Resumo Financeiro: ")
     elif opcao == "0":

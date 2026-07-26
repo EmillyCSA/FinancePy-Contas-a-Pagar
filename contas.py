@@ -14,8 +14,8 @@ def cadastrar_conta ():
 
     conexao.commit()
 
-    print ("✅Conta cadastrada com sucesso!")
-    print (             )
+    print ("✅ Conta cadastrada com sucesso!")
+    print ()
 
 #Listar contas
 
@@ -36,7 +36,7 @@ def listar_contas():
         print(f"Vencimento..: {vencimento}")
         print(f"Status......: {paga}")
         print("=" * 35)
-        print(          )
+        print()
 
 #Criar e definir a função 3: Marcar conta como paga
 
@@ -54,7 +54,25 @@ def marcar_conta_paga():
     """, ("Sim", id_conta))
 
     conexao.commit()
-    print(      )
-    print("✅Conta marcada como paga com sucesso!")
-    print(      )
+    print()
+    print("✅ Conta marcada como paga com sucesso!")
+    print()
 
+# Função:4 Excluir conta
+
+def excluir_conta():
+    print ("\n" + "=" * 35)
+    print ("EXCLUIR CONTA" .center(35))
+    print("=" * 35)
+
+    id_conta = input ("Digite o ID da conta: ")
+
+    cursor.execute("""
+    DELETE FROM contas
+    WHERE id = ? ;
+    """ , (id_conta,))
+
+    conexao.commit()
+    print ()
+    print ("✅ Conta excluída !")
+    print ()
