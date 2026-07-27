@@ -80,10 +80,15 @@ def excluir_conta():
     WHERE id = ? ;
     """ , (id_conta,))
 
-    conexao.commit()
-    print ()
-    print ("✅ Conta excluída !")
-    print ()
+    if cursor.rowcount == 0:
+        print()
+        print("❌ Conta não encontrada!")
+        print()
+    else:
+        conexao.commit()
+        print ()
+        print ("✅ Conta excluída com sucesso !")
+        print ()
 
 
 # Função :5  Resumo Financeiro
