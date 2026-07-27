@@ -55,10 +55,16 @@ def marcar_conta_paga():
     WHERE id = ?
     """, ("Sim", id_conta))
 
-    conexao.commit()
-    print()
-    print("✅ Conta marcada como paga com sucesso!")
-    print()
+    if cursor.rowcount == 0:
+        print()
+        print("❌ Conta não encontrada!")
+        print()
+    else:
+        conexao.commit()
+
+        print()
+        print("✅ Conta marcada como paga com sucesso!")
+        print()
 
 # Função:4 Excluir conta
 
