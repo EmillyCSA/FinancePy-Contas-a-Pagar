@@ -2,7 +2,9 @@
 from banco import conexao, cursor
 
 def cadastrar_conta ():
-    print (    "Cadastro de conta ")
+    print("\n" + "=" * 35)
+    print("CADASTRO DE CONTA".center(35))
+    print("=" * 35)
 
     nome_conta = input ("Nome da conta: ")
     valor = input ("Valor da conta: ")    
@@ -76,3 +78,65 @@ def excluir_conta():
     print ()
     print ("✅ Conta excluída !")
     print ()
+
+
+# Função :5  Resumo Financeiro
+
+def resumo_financeiro():
+    print ("\n" + "=" * 35)
+    print ("RESUMO FINANCEIRO" .center(35))
+    print ("=" * 35)
+
+    cursor.execute("""
+    SELECT COUNT(*)
+    FROM contas
+    """)
+
+    total_contas = cursor.fetchone()[0]
+
+    print()
+    print(f"📋 Total de contas: {total_contas}")
+    print()
+
+    cursor.execute("""
+    SELECT SUM(valor)
+    FROM contas
+    """)
+
+    valor_total = cursor.fetchone()[0]
+
+    print(f"💰 Valor total: R$ {valor_total:.2f}")
+    print()
+
+    cursor.execute("""
+    SELECT COUNT(*)
+    FROM contas
+    WHERE paga = ?
+    """, ("Sim",))
+
+    contas_pagas = cursor.fetchone()[0]
+
+    print(f"✅ Contas pagas: {contas_pagas}")
+    print ()
+
+    cursor.execute("""
+    SELECT COUNT(*)
+    FROM contas
+    WHERE paga = ?
+    """, ("Não",))
+
+    contas_pendentes = cursor.fetchone()[0]
+
+    print(f"🕒 Contas pendentes: {contas_pendentes}")
+    print()
+
+    cursor.execute("""
+    SELECT SUM(valor)
+    FROM contas
+    WHERE paga = ?
+    """, ("Não",))
+
+    valor_pendente = cursor.fetchone()[0]
+
+    print(f"💸 Valor pendente: R$ {valor_pendente:.2f}")
+    print()
