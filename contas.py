@@ -151,3 +151,52 @@ def resumo_financeiro():
 
     print(f"💸 Valor pendente: R$ {valor_pendente:.2f}")
     print()
+
+# Função:6 - Editor de Contas
+
+def editar_conta():
+    print("\n" + "=" * 35)
+    print("EDITAR CONTA".center(35))
+    print("=" * 35)
+
+    id_conta = input("Digite o ID da conta: ")
+    print()
+
+    cursor.execute("""
+    SELECT *
+    FROM contas
+    WHERE id = ?
+    """, (id_conta,))
+
+    conta = cursor.fetchone()
+
+    if conta is None:
+        print()
+        print("❌ Conta não encontrada!")
+        print()
+        return
+
+    id_conta, nome, valor, vencimento, paga = conta
+
+    print()
+    print(f"Conta atual.......: {nome}")
+    print(f"Valor atual.......: R$ {valor:.2f}")
+    print(f"Vencimento atual..: {vencimento}")
+    print()
+
+    novo_nome = input("Novo nome da conta: ")
+    novo_valor = input("Novo valor: ")
+    novo_vencimento = input("Novo vencimento: ")
+    print()
+
+    cursor.execute("""
+    UPDATE contas
+    SET nome = ?, valor = ?, vencimento = ?
+    WHERE id = ?
+    """, (novo_nome, novo_valor, novo_vencimento, id_conta))
+
+    conexao.commit()
+
+    print()
+    print("✅ Conta atualizada com sucesso!")
+    print()
