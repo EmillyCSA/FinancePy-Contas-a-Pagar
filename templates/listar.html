@@ -44,7 +44,7 @@
 
             <p><strong>Valor:</strong> R$ {{ "%.2f"|format(conta[2])|replace(".", ",") }}</p>
 
-            <p><strong>Vencimento:</strong> {{ conta[3] }}</p>
+            <p><strong>Vencimento:</strong> {{ conta[3][8:10] }}/{{ conta[3][5:7] }}/{{ conta[3][0:4] }}</p>
 
             <p><strong>Status:</strong> {{ conta[4] }}</p>
 
