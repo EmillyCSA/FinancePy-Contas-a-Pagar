@@ -1,0 +1,69 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contas - FinancePy</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+    <header>
+
+        <h1>FinancePy</h1>
+
+        <p>Controle de contas financeiras</p>
+
+    </header>
+
+
+    <main>
+
+        <section class="dashboard">
+
+            <h2>Contas Cadastradas</h2>
+
+
+            <div class="lista-contas">
+
+    {% for conta in contas %}
+
+        <div class="card">
+
+            <h3>{{ conta[1] }}</h3>
+
+            <p><strong>ID:</strong> {{ conta[0] }}</p>
+
+            <p><strong>Valor:</strong> R$ {{ "%.2f"|format(conta[2])|replace(".", ",") }}</p>
+
+            <p><strong>Vencimento:</strong> {{ conta[3] }}</p>
+
+            <p><strong>Status:</strong> {{ conta[4] }}</p>
+
+        </div>
+
+    {% endfor %}
+
+</div>
+
+
+            <button type="button">Voltar</button>
+
+        </section>
+
+    </main>
+
+
+</body>
+
+</html>
+```
